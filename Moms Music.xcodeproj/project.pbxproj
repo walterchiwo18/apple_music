@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		9BC59A172957CBD900851A85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC59A162957CBD900851A85 /* AppDelegate.swift */; };
-		9BC59A192957CBD900851A85 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC59A182957CBD900851A85 /* ViewController.swift */; };
 		9BC59A1C2957CBD900851A85 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BC59A1A2957CBD900851A85 /* Main.storyboard */; };
 		9BC59A1E2957CBDD00851A85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BC59A1D2957CBDD00851A85 /* Assets.xcassets */; };
 		9BC59A212957CBDD00851A85 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BC59A1F2957CBDD00851A85 /* LaunchScreen.storyboard */; };
 		9BC59A2C2957CBDD00851A85 /* Moms_MusicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC59A2B2957CBDD00851A85 /* Moms_MusicTests.swift */; };
 		9BC59A372957CBDD00851A85 /* Moms_MusicUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC59A362957CBDD00851A85 /* Moms_MusicUITests.swift */; };
+		9BC59A452957CC9F00851A85 /* MusicButtonScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC59A442957CC9F00851A85 /* MusicButtonScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +36,6 @@
 /* Begin PBXFileReference section */
 		9BC59A132957CBD900851A85 /* Moms Music.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Moms Music.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BC59A162957CBD900851A85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9BC59A182957CBD900851A85 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9BC59A1B2957CBD900851A85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9BC59A1D2957CBDD00851A85 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9BC59A202957CBDD00851A85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +46,7 @@
 		9BC59A322957CBDD00851A85 /* Moms MusicUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Moms MusicUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BC59A362957CBDD00851A85 /* Moms_MusicUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moms_MusicUITests.swift; sourceTree = "<group>"; };
 		9BC59A382957CBDD00851A85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9BC59A442957CC9F00851A85 /* MusicButtonScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicButtonScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,8 +98,8 @@
 			isa = PBXGroup;
 			children = (
 				9BC59A162957CBD900851A85 /* AppDelegate.swift */,
-				9BC59A182957CBD900851A85 /* ViewController.swift */,
 				9BC59A1A2957CBD900851A85 /* Main.storyboard */,
+				9BC59A442957CC9F00851A85 /* MusicButtonScreen.swift */,
 				9BC59A1D2957CBDD00851A85 /* Assets.xcassets */,
 				9BC59A1F2957CBDD00851A85 /* LaunchScreen.storyboard */,
 				9BC59A222957CBDD00851A85 /* Info.plist */,
@@ -256,8 +256,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9BC59A192957CBD900851A85 /* ViewController.swift in Sources */,
 				9BC59A172957CBD900851A85 /* AppDelegate.swift in Sources */,
+				9BC59A452957CC9F00851A85 /* MusicButtonScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,6 +369,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VALID_ARCHS = "arm64 armv7 armv7s \U0010arm64e";
 			};
 			name = Debug;
 		};
@@ -423,6 +424,7 @@
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "arm64 armv7 armv7s \U0010arm64e";
 			};
 			name = Release;
 		};
@@ -440,7 +442,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.walterchiwo.Moms-Music";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
+				VALID_ARCHS = "arm64e arm64";
 			};
 			name = Debug;
 		};
@@ -458,7 +461,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.walterchiwo.Moms-Music";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
+				VALID_ARCHS = "arm64e arm64";
 			};
 			name = Release;
 		};
